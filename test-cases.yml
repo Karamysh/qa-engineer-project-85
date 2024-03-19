@@ -1,11 +1,11 @@
 ---
-- summary: 
+- summary: |
     Проверка успешной регистрации
-  requirement: 
+  requirement: |
     При вводе правильных данных пользователь должен успешно зарегистрироваться на сайте.
-  prerequisites: 
+  prerequisites: |
     Страница регистрации должна быть открыта.
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Вводим логин в поле "Nickname".
@@ -13,16 +13,16 @@
     - Вводим пароль в поле "Password".
     - Подтверждаем пароль в поле "Password Confirmation".
     - Нажимаем кнопку "Submit".
-  expected-result: 
+  expected-result: |
     Пользователь успешно зарегистрирован.
 
-- summary: 
+- summary: |
     Проверка регистрации ранее зарегистрированного пользователя
-  requirement: 
+  requirement: |
     При вводе данных зарегистрированного пользователя должно появиться сообщение об ошибке
-  prerequisites: 
+  prerequisites: |
     Страница регистрации должна быть открыта
-  test-data: 
+  test-data: |
     Логин = User1 или любое другое уникальное имя
     E-mail = любой действительный адрес электронной почты, например, 111fdgdsgsb@gmail.com
     Пароль = qwerty1234
@@ -34,117 +34,117 @@
     - На главной странице сайта нажимаем "Sign Up"
     - Вводим данные для регистрации из предоставленных данных
     - Нажимаем кнопку "Submit"   
-  expected-result: 
+  expected-result: |
     Регистрация пользователя неудачна
 
-- summary: 
+- summary: |
     Проверка регистрации без указания логина
-  requirement: 
+  requirement: |
     При вводе данных без указания логина должны появиться сообщения об ошибках
-  prerequisites: 
+  prerequisites: |
     Страница регистрации должна быть открыта
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Вводим адрес электронной почты в поле "Email"
     - Вводим пароль в поле "Password"
     - Подтверждаем пароль в поле "Password Confirmation"
     - Нажимаем кнопку "Submit"
-  expected-result: 
+  expected-result: |
     Регистрация пользователя неудачна
 
-- summary: 
+- summary: |
    Проверка успешной авторизации
-  requirement: 
+  requirement: |
     При правильном вводе логина и пароля пользователь должен успешно войти в систему
-  prerequisites: 
+  prerequisites: |
     Страница входа должна быть открыта, и пользователь должен быть зарегистрирован на сайте
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Вводим данные для входа зарегистрированного пользователя
     - Нажимаем кнопку "Submit"
-  expected-result: 
+  expected-result: |
     Пользователь успешно авторизован
 
-- summary: 
+- summary: |
     Проверка авторизации незарегистрированного пользователя
-  requirement: 
+  requirement: |
     При неправильном вводе логина или пароля пользователь должен получить сообщение об ошибке
-  prerequisites:
+  prerequisites: |
     Страница входа должна быть открыта
-  test-data: 
+  test-data: |
     Логин = user1
     Пароль = qwerty123
   steps:
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку "Sign In"
-  expected-result: 
+  expected-result: |
     Пользователь не авторизован
 
-- summary: 
+- summary: |
     Проверка выхода из аккаунта
-  requirement: 
+  requirement: |
     Залогиненный пользователь должен иметь возможность выйти из системы
-  prerequisites: 
+  prerequisites: |
     Пользователь должен быть залогинен на сайте
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Нажимаем на логотип игрока в правой части заголовка
     - В открывшемся меню выбираем "Sign Out"
-  expected-result: 
+  expected-result: |
     Пользователь разлогинен
 
-- summary: 
+- summary: |
     Проверка отображения списка игр
-  requirement: 
+  requirement: |
     При нажатии на логотип сайта в левой части заголовка должна отображаться страница "Lobby" со списком ожидающих и активных игр
-  prerequisites:
+  prerequisites: |
     Не требуется
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Нажимаем левой кнопкой мыши на логотип сайта в левой части заголовка сайта
-  expected-result: 
+  expected-result: |
     Отображается список игр с вкладкой "Lobby".
 
-- summary: 
+- summary: |
     Проверка просмотра чужой игры в качестве зрителя
-  requirement: 
+  requirement: |
     При нажатии на кнопку "Show" в таблице игр пользователь должен увидеть страницу с заданием и кодом первого и второго игроков
-  prerequisites:
+  prerequisites: |
     Открыта вкладка "Lobby" на главной странице сайта 
-  test-data: 
+  test-data: |
     Не требуется
   steps: 
     - Выбираем любую игру из таблицы с кнопкой "Show"
     - Нажимаем на кнопку "Show"
-  expected-result: 
+  expected-result: |
     Открывается активная игра в режиме просмотра для зрителя
 
-- summary: 
+- summary: |
     Проверка входа в игру при клике на кнопку "Fight" в списке игр
-  requirement: 
+  requirement: |
     При нажатии на кнопку "Fight" в таблице игр пользователь должен увидеть страницу с заданием игры
-  prerequisites:
+  prerequisites: |
     Открыта вкладка "Lobby" на главной странице сайта
-  test-data: 
+  test-data: |
     Не требуется
   steps: 
     - Выбираем любую игру из таблицы с кнопкой "Fight"
     - Нажимаем на кнопку "Fight"
-  expected-result: 
+  expected-result: |
     Пользователь успешно входит в активную игру в качестве игрока
 
-- summary: 
+- summary: |
     Проверка создания игры с ботом
-  requirement: 
+  requirement: |
     Пользователь должен иметь возможность создать игру с ботом
-  prerequisites:
+  prerequisites: |
     Открыта главная страница сайта
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Нажимаем левой кнопкой мыши на кнопку "Create a game"
@@ -154,16 +154,16 @@
     - Выбираем название игры из списка или случайную игру
     - Выбираем тэг игры
     - Нажимаем кнопку "Create a battle"
-  expected-result: 
+  expected-result: |
     Игра с ботом успешно создана
 
-- summary: 
+- summary: |
     Проверка создания игры с выбранным игроком
-  requirement: 
+  requirement: |
     Пользователь должен иметь возможность создать игру с выбранным игроком
-  prerequisites:
+  prerequisites: |
     Игрок-1 авторизован на сайте, Игрок-2 авторизован на сайте через другой браузер или устройство
-  test-data: 
+  test-data: |
     Не требуется
   steps:
     - Игрок-1 нажимает "Create a game"
@@ -172,208 +172,208 @@
     - В окне "Create a game" Игрок-1 нажимает кнопку "Create invite"
     - Игрок-2 нажимает на уведомление о приглашении в игру на логотипе
     - Игрок-2 выбирает кнопку "Accept" для принятия приглашения на игру
-  expected-result: 
+  expected-result: |
     Игра с выбранным игроком успешно начата
 
-- summary:
+- summary: |
     Проверка создания игры с произвольным игроком "With other users"
-  requirement:
+  requirement: |
     Пользователь может создать игру с произвольным игроком
-  prerequisites:
+  prerequisites: |
     Игрок-1 и Игрок-2 авторизованы на сайте
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Игрок-1 нажимает "Create a game"
     - В окне "Create a game" выбирает "Game Type = With other users"
     - Нажимает кнопку "Create battle"
     - Игрок-2 нажимает на кнопку "Fight" в таблице на вкладке "LOBBY" в созданной игре Игрока-1
-  expected-result:
+  expected-result: |
     Игра успешно начата
     
-- summary:
+- summary: |
     Проверка отображения приглашения в игру при игре с выбранным игроком "With a friend"
-  requirement:
+  requirement: |
     Пользователь должен увидеть приглашение в игру от другого игрока
-  prerequisites:
+  prerequisites: |
     Игрок-1 и Игрок-2 авторизованы на сайте
-  test-data:
+  test-data: |
     Не требуется
   steps:  
     - Игрок-1 нажимает "Create a game"
     - В окне "Create a game" выбирает "Game Type = With a friend"
     - В окне "Create a game" выбирает в поле "Choose opponent" никнейм Игрока-2
     - Игрок-1 нажимает кнопку "Create invite"
-  expected-result:
+  expected-result: |
     Игрок-2 видит на своём логотипе значок приглашения в игру
     
-- summary:
+- summary: |
     Проверка возможности выхода из окна настроек новой игры без запуска игры
-  requirement:
+  requirement: |
     Пользователь должен иметь возможность выйти из окна настроек без запуска игры
-  prerequisites:
+  prerequisites: |
     Открыта главная страница сайта
-  test-data:
+  test-data: |
     Не требуется
   steps:  
     - Нажать левой клавишей мышки на кнопку "Create a game"
     - В окне настроек новой игры нажать "X" в верхнем правом углу
-  expected-result:
+  expected-result: |
     Отображается главная страница сайта
     
-- summary:
+- summary: |
     Проверка возможности просмотра завершённой игры
-  requirement:
+  requirement: |
     Пользователь должен иметь возможность просмотра страницы с заданием и кодом первого и второго игрока
-  prerequisites:
+  prerequisites: |
     Открыта вкладка "Completed Games" на главной странице сайта
-  test-data:
+  test-data: |
     Не требуется
   steps: 
     - Нажать левой клавишей мышки на кнопку "Show" в таблице игр "Completed Games"
-  expected-result:
+  expected-result: |
     Отображается страница завершённой игры с описанием задания и кодами первого и второго игрока
     
-- summary:
+- summary: |
     Проверка возможности сдаться в активной игре
-  requirement:
+  requirement: |
     Пользователь должен иметь возможность в любой момент выйти из активной игры
-  prerequisites:
+  prerequisites: |
     Пользователь находится в активной игре
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать на кнопку "Give Up"
     - В окне подтверждения нажать кнопку "Give Up"
-  expected-result:
+  expected-result: |
     Отображается вкладка "LOBBY" главной страницы
     
-- summary:
+- summary: |
     Проверка возврата из страницы незавершённой игры на главную страницу сайта
-  requirement:
+  requirement: |
     При клике на кнопку "Back to Home" отображается главная страница сайта с кнопкой "Continue"
-  prerequisites:
+  prerequisites: |
     Открыта страница игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать на кнопку "Back to Home"
-  expected-result:
+  expected-result: |
     Отображается вкладка "LOBBY" главного окна с кнопкой "Continue" для возврата в игру
     
-- summary:
+- summary: |
     Проверка возврата в незавершённую игру с главной страницы сайта
-  requirement:
+  requirement: |
     Пользователь должен иметь возможность продолжить незавершённую игру
-  prerequisites:
+  prerequisites: |
     Активна игра, открыта главная страница на вкладке "LOBBY"
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Кликнуть мышкой на кнопку "CONTINUE"
-  expected-result:
+  expected-result: |
     Отображается страница незавершённой игры
     
-- summary:
+- summary: |
     Проверка возврата из страницы завершённой игры на главную страницу сайта
-  requirement:
+  requirement: |
     При клике на кнопку "Back to Home" отображается главная страница сайта
-  prerequisites:
+  prerequisites: |
     Открыта страница завершённой игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать на кнопку "Back to Home"
-  expected-result:
+  expected-result: |
     Отображается вкладка "LOBBY" главного окна
     
-- summary:
+- summary: |
     Проверка возможности перезапуска завершённой игры
-  requirement:
+  requirement: |
     При нажатии кнопки "Rematch" запускается новая игра с теми же параметрами
-  prerequisites:
+  prerequisites: |
     Открыта страница завершённой игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать на кнопку "Rematch"
-  expected-result:
+  expected-result: |
     Отображается обновлённое задание на вкладке "TASK" и обратный отсчёт игрового времени
     
-- summary:
+- summary: |
     Проверка возможности выбора языка программирования
-  requirement:
+  requirement: |
     При клике на список языков пользователь должен увидеть раскрытый список доступных языков программирования
-  prerequisites:
+  prerequisites: |
     Открыта страница игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать левой клавишей мышки на выпадающий список над окном для кода
-  expected-result:
+  expected-result: |
     Отображается список доступных языков программирования
     
-- summary:
+- summary: |
     Проверка возможности переключения между языками программирования
-  requirement:
+  requirement: |
     При клике на пунктах из списка языков программирования в редакторе кода пользователь должен увидеть меняющиеся шаблоны кода
-  prerequisites:
+  prerequisites: |
     Открыта страница игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать левой клавишей мышки на выпадающий список над окном для кода
     - Выбрать из списка любой отличный от текущего язык программирования и кликнуть его
-  expected-result:
+  expected-result: |
     В редакторе кода отображается изменённый шаблон кода
     
-- summary:
+- summary: |
     Проверка возможности возврата кода к исходному состоянию
-  requirement:
+  requirement: |
     При клике на кнопку "Reset Editor" код в окне редактора должен вернуться в исходное состояние
-  prerequisites:
+  prerequisites: |
     Открыта страница игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Кликнуть мышкой на кнопку "Reset editor"
-  expected-result:
+  expected-result: |
     Отображается исходный шаблон кода в редакторе
     
-- summary:
+- summary: |
     Проверка возможности тестирования кода
-  requirement:
+  requirement: |
     При клике на кнопку "Check Solution" на вкладке "OUTPUT" должен отобразиться результат проверки кода
-  prerequisites:
+  prerequisites: |
     Открыта страница игры
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Кликнуть мышкой на кнопку "Check Solution"
-  expected-result:
+  expected-result: |
     На вкладке "OUTPUT" отображается результат проверки кода
     
-- summary:
+- summary: |
     Проверка возможности переключения языка описания задания
-  requirement:
+  requirement: |
     При выборе языка "EN/RU" должен переключаться язык описания задания
-  prerequisites:
+  prerequisites: |
     Открыта страница игры
-  test-data:
+  test-data: |
     Не требуется
-  steps:
+  steps: 
     - Кликнуть мышкой на кнопку "EN/RU"
     - Выбрать язык, отличный от установленного
-  expected-result:
+  expected-result: |
     На вкладке "TASK" отображается описание задания и пример на выбранном языке
 
-- summary:
+- summary: |
     Проверка отображения сообщения о победе
-  requirement:
+  requirement: |
     При победе в игре игра должна завершаться с отображением соответствующего сообщения
-  prerequisites:
+  prerequisites: |
     Открыта главная страница
-  test-data:
+  test-data: |
     const solution = (width, length) => {return width * length;};
   steps: 
     - Нажать кнопку "Create game"
@@ -383,16 +383,16 @@
     - Установить максимально возможное игровое время
     - Написать код в редакторе (см. test-data для задачи rect_area)
     - Нажать кнопку "Run"
-  expected-result:
+  expected-result: |
     Отображается сообщение о победе "You have won the game!"
     
-- summary:
+- summary: |
     Проверка отображения сообщения о поражении
-  requirement:
+  requirement: |
     При победе другого игрока должно отображаться сообщение о поражении
-  prerequisites:
+  prerequisites: |
     Открыта главная страница
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать кнопку "Create game"
@@ -401,16 +401,16 @@
     - Выбрать простейшую задачу (например, расчёт площади прямоугольника по двум сторонам rect_area)
     - Установить максимально возможное игровое время
     - Дождаться, пока бот напишет код, не вводя код в редакторе
-  expected-result:
+  expected-result: |
     Отображается сообщение о поражении "Your opponent has won the game"
     
-- summary:
+- summary: |
     Проверка завершения игры по истечении времени при отсутствии победителя
-  requirement:
+  requirement: |
     При истечении игрового времени и отсутствии решения у обоих игроков игра должна завершаться с появлением текстового сообщения
-  prerequisites:
+  prerequisites: |
     Открыта главная страница
-  test-data:
+  test-data: |
     Не требуется
   steps:
     - Нажать кнопку "Create game"
@@ -418,16 +418,16 @@
     - Выбрать игру с ботом
     - Установить минимально возможное игровое время
     - Дождаться завершения игрового времени, не вводя код в редакторе
-  expected-result:
+  expected-result: |
     Отображается сообщение об истечении времени и отсутствии победителя "Time is up. There are no winners in the game"
     
-- summary:
+- summary: |
     Проверка недоступности проверки своего решения для победителя в игре
-  requirement:
+  requirement: |
     Игрок-победитель не может больше проверять свой код
-  prerequisites:
+  prerequisites: |
     Открыта главная страница
-  test-data:
+  test-data: |
     const solution = (width, length) => {return width * length;};
   steps:
     - Нажать кнопку "Create game"
@@ -438,16 +438,16 @@
     - Написать код (см. тест-дата для задачи rect_area) в редакторе
     - Нажать кнопку "Run"
     - Дождаться результатов проверки на вкладке "OUTPUT" и появления сообщения о победе
-  expected-result:
+  expected-result: |
     Проверка решения в этой игре больше недоступна победителю
     
-- summary:
+- summary: |
     Проверка недоступности изменения своего кода для победителя в игре
-  requirement:
+  requirement: |
     Игрок-победитель не может больше изменять свой код, код доступен только для просмотра
-  prerequisites:
+  prerequisites: |
     Открыта главная страница
-  test-data:
+  test-data: |
     const solution = (width, length) => {return width * length;};
   steps:
     - Нажать кнопку "Create game"
@@ -459,5 +459,5 @@
     - Нажать кнопку "Run"
     - Дождаться результатов проверки на вкладке "OUTPUT" и появления сообщения о победе
     - Изменить код в редакторе
-  expected-result:
+  expected-result: |
     Код победителя игры не изменяется, доступен только для просмотра
